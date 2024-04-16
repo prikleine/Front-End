@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function pulaLinha() {
+        document.write("<br>");
+        document.write("<br>");
+    }
+    
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    // interagir com usuario: console.log ou pompt()  - recebe o dado digitado pelo usuário
+    // prompt transforma em string - para transformar em numero use parseInt()
+    
+    //while
+    var anoCopa = 1930;
+    while(anoCopa <= 2018) {
+        mostra("Teve copa em " + anoCopa);
+        anoCopa = anoCopa + 4;
+    }
+    mostra("FIM - Chegou ao ultimo ano da copa");
+
+    //tabuada com while
+    var multiplicador = 1;
+    while(multiplicador <= 10) {
+        
+        mostra(7 * multiplicador);
+        multiplicador++
+        // é igual multiplicador=multiplicador+1;
+    }
+
+    //tabuada com for
+    for(var multiplicador = 1; multiplicador <= 10; multiplicador ++) {
+        //primeiro é a declaração do multiplicador, segundo - break point, terceiro - incrementador
+        mostra(5 * multiplicador);
+    }
+
+    //acumulando valores
+
+    var totalFamiliares = parseInt(prompt("Quantidade de familiares:"));
+    var numero = 1;
+    var somaIdades = 0;
+    while(numero <= totalFamiliares){
+        
+        var idade = parseInt(prompt("Informe a idade. da pessoa:"));
+        somaIdades = somaIdades + idade;
+        numero++;
+    }
+
+    var mediaDasIdades = somaIdades/totalFamiliares;
+    mostra("A média das idades é: " + mediaDasIdades);
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <meta charset="UTF-8">
+
+    <!-- //input - campo para preeencher - tag q fecha nela mesmo -->
+    <input/>
+    <button>Compare com o meu segredo</button>
+
+    <script>
+        var segredo = Math.round(Math.random() * 10);
+
+        // .querySelector - acedda o que foi passado no input html e passa pra variavel input do JS
+        var input = document.querySelector("input");
+
+        function verifica() {
+            //input.value - retorna o valor do input
+            // se nao colocar o if dentro da função, ele rodará assim q a página for carregada
+            if(input.value == segredo) {
+
+            alert("Você ACERTOU!");
+            } else {
+
+            alert("Você ERROU!!!!!!!!");
+            }
+            // limpa o input pra ficar pronto para uma nova tentativa
+            input.value = "";
+            // volta o cursor na campo (input)
+            input.focus();
+        }
+
+        // pro JS pegar o acionamento do botão
+        var button = document.querySelector("button");
+        //no clicar no botao (onclick) ele guardará o verifica. Não colocar () pq senao ele aciona qdo a pagina 
+        button.onclick = verifica;
+
+    </script>
+</body>
+</html>

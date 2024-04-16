@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function pulaLinha() {
+            document.write("<br>");
+            document.write("<br>");
+        }
+
+        function mostra(frase) {
+            document.write(frase);
+            pulaLinha();
+        }
+
+        //Math.round - arredonda numeros
+        // Math.random () - sorteio numeros de 0 a 1; se multiplicar por 10 - sorteia de 0 a 10; se multilicar por 100 - sorteia de 0 a 100
+        var numeroPensado = Math.round(Math.random() * 10);
+        var tentativas = 1;
+
+        while(tentativas <= 3) {
+            var chute = parseInt(prompt("Digite seu chute!"));
+            if(chute == numeroPensado) {
+                mostra("Você ACERTOU, o número pensado era " + numeroPensado);
+                break;
+            } else {
+                mostra("Você ERROU!");
+            }
+            tentativas++;
+        }
+        mostra("FIM. o numero pensado foi: " + numeroPensado);
+    </script>
+</body>
+</html>
